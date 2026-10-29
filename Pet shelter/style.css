@@ -1,0 +1,322 @@
+/* Paw Shelter - ST10541039 - WEDE5020 Part 2 */
+/* Colors: Brown #4A2C2A | Orange #FF8C42 | Cream #FFF5E9 */
+/* Durban based animal shelter website */
+
+/* 1. RESET - Removes default browser spacing for consistency */
+* { margin:0; padding:0; box-sizing:border-box; }
+
+/* 2. BODY - Main background, font and readability */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif; /* Clean readable font */
+  background: #FFF5E9; /* Cream background - warm shelter feel */
+  color: #4A2C2A; /* Brown text - brand color */
+  line-height: 1.8; /* More space between lines for readability */
+  font-size: 18px; /* Bigger font for accessibility */
+}
+
+/* 3. HEADER - Top brown section with logo */
+header {
+  background: #4A2C2A; /* Dark brown brand header */
+  color: white;
+  padding: 2rem 1rem; /* Space inside header */
+  text-align: center;
+  display: flex; /* Flexbox for centering */
+  flex-direction: column; /* Stack logo, title, slogan vertically */
+  align-items: center; /* Center horizontally */
+  gap: 0.5rem; /* Space between logo and text */
+}
+
+/* 4. LOGO - Paws and Hope image styling */
+.logo {
+  width: 110px !important; /* Fixed size */
+  height: 110px !important;
+  object-fit: contain; /* Logo not stretched */
+  background: white; /* White background for logo visibility */
+  padding: 8px;
+  border-radius: 12px; /* Rounded corners */
+}
+
+/* 5. HEADER TEXT */
+header h1 { font-size: 2rem; letter-spacing: 1px; }
+header p { color: #FF8C42; font-weight: bold; } /* Orange slogan */
+
+/* 6. NAVIGATION - Orange sticky menu bar */
+nav {
+  background: #FF8C42; /* Orange nav - eye catching */
+  display: flex;
+  justify-content: center; /* Center links */
+  flex-wrap: wrap; /* Wrap on small screens */
+  gap: 0.2rem;
+  padding: 0.7rem;
+  position: sticky; /* Stays at top when scrolling */
+  top: 0;
+  z-index: 100; /* Above other content */
+}
+
+/* 7. NAV LINKS */
+nav a {
+  color: white;
+  text-decoration: none; /* No underline */
+  padding: 0.7rem 1.4rem;
+  font-weight: 700; /* Bold */
+  border-radius: 6px;
+  transition: 0.2s; /* Smooth hover effect */
+}
+nav a:hover { background: #4A2C2A; } /* Brown on hover */
+
+/* 8. MAIN CONTENT - Centered container */
+main {
+  width: 100%;
+  max-width: 1150px; /* Not too wide on big screens */
+  margin: 2.5rem auto; /* Centered with space top/bottom */
+  padding: 0 2rem; /* Side padding */
+}
+
+/* 9. SECTIONS - White cards */
+section {
+  background: white;
+  padding: 2.2rem;
+  border-radius: 12px; /* Rounded */
+  margin-bottom: 2.2rem; /* Space between sections */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Soft shadow */
+}
+
+/* 10. SECTION HEADINGS */
+section h2 {
+  color: #4A2C2A;
+  border-bottom: 3px solid #FF8C42; /* Orange underline */
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.2rem;
+  font-size: 1.7rem;
+}
+
+/* 11. GRID - 3 dogs per row layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 1.8rem; /* Space between cards */
+  margin-top: 1.5rem;
+}
+
+/* 12. CARD - Each dog */
+.card {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  overflow: hidden; /* Image stays inside */
+  text-align: center;
+  transition: 0.2s;
+  background: white;
+}
+.card:hover { transform: translateY(-5px); box-shadow: 0 6px 20px rgba(0,0,0,0.15); } /* Lift on hover */
+.card img { width: 100%; height: 210px; object-fit: cover; } /* Same size dog images */
+.card h3 { margin: 0.8rem 0 0.2rem; }
+.card p { padding: 0 0.8rem 1rem; color: #666; }
+
+/* 13. FOOTER */
+footer {
+  background: #4A2C2A;
+  color: white;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  margin-top: 3rem;
+}
+
+/* 14. RESPONSIVE - Tablet: 2 columns */
+@media (max-width: 900px) { 
+  .grid { grid-template-columns: repeat(2, 1fr); } 
+}
+
+/* 15. RESPONSIVE - Mobile: 1 column */
+@media (max-width: 600px) { 
+  .grid { grid-template-columns: 1fr; } 
+  main { padding: 0 1rem; } /* Less padding on phone */
+}
+
+/* Contact Layout - Grid for contact page */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 24px;
+  align-items: stretch;
+  margin-top: 24px;
+}
+
+/* Contact and Map Cards */
+.contact-card,
+.map-card {
+  background: #fffdf9;
+  border: 1px solid #e8d8bf;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(70, 52, 31, 0.08);
+  padding: 24px;
+}
+
+/* Map Card Specifics */
+.map-card {
+  min-height: 320px;
+  overflow: hidden;
+  padding: 0;
+}
+.map-card iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  border: 0;
+}
+
+/* Responsive - Contact layout on smaller screens */
+@media (max-width: 768px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.clothing-hero {
+  text-align: center;
+  padding: 1rem 0 1.5rem;
+}
+
+.clothing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(74, 44, 42, 0.08);
+  border: 1px solid #f2e1d0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(74, 44, 42, 0.12);
+}
+
+.product-card img {
+  display: block;
+  width: 100%;
+  height: clamp(240px, 30vw, 420px);
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 1rem 1rem 1.2rem;
+}
+
+.product-info h3 {
+  color: #4A2C2A;
+  margin-bottom: 0.4rem;
+}
+
+.product-info p {
+  color: #5d4c45;
+  margin-bottom: 0.6rem;
+}
+
+.product-info span {
+  display: inline-block;
+  background: #FF8C42;
+  color: #fff;
+  font-weight: 700;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+}
+
+@media (max-width: 600px) {
+  .clothing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card img {
+    height: 280px;
+  }
+}
+
+/* CEO Verification Section */
+.ceo-section {
+  background: #fffdf9;
+  border: 1px solid #f3e3d0;
+}
+
+.ceo-form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.2rem;
+}
+
+.form-row {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.ceo-form label {
+  font-weight: 700;
+  color: #4A2C2A;
+}
+
+.ceo-form input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid #d9c4b0;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #fff;
+}
+
+.ceo-form button {
+  width: fit-content;
+  background: #FF8C42;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.9rem 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.ceo-form button:hover {
+  background: #4A2C2A;
+}
+
+.ceo-info {
+  margin-top: 1.5rem;
+  background: #fff5ee;
+  border: 1px solid #f2d2b8;
+  border-radius: 12px;
+  padding: 1.3rem;
+  color: #4A2C2A;
+}
+
+.ceo-info h3 {
+  margin-bottom: 0.75rem;
+}
+
+.ceo-info p {
+  margin-bottom: 0.35rem;
+}
+
+.form-message {
+  margin-top: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.form-message.error {
+  background: #fdeaea;
+  color: #8b1e1e;
+  border: 1px solid #f3b9b9;
+}
+
+.form-message.success {
+  background: #eaf9ee;
+  color: #1f6f42;
+  border: 1px solid #c8ebd3;
+}

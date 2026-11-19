@@ -42,7 +42,33 @@
 <div class="card"><h3>Phone</h3><p>068 443 2036<br>7 days a week</p></div>
 <div class="card"><h3>Email</h3><p>info@pawshelter.co.za<br>Reply within 24h</p></div>
 </section>
+<!-- SECTION 2: ENQUIRY FORM -->
+<section>
+<h2>Send Us An Enquiry</h2>
+<p>Want to adopt, volunteer or ask about pet care? Fill in the form below and we will reply within 24 hours.</p>
+<form id="enquiryForm">
+<label for="name">Full Name:</label><br>
+<input type="text" id="name" name="name" placeholder="Enter your full name" required><br><br>
 
+<label for="email">Email:</label><br>
+<input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+<label for="interest">I am interested in:</label><br>
+<select id="interest" name="interest" required>
+<option value="">Please select...</option>
+<option value="adoption">Adopting a Pet</option>
+<option value="volunteer">Volunteering</option>
+<option value="donation">Donating</option>
+<option value="general">General Enquiry</option>
+</select><br><br>
+
+<label for="message">Message:</label><br>
+<textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea><br><br>
+
+<button type="submit">Send Enquiry</button>
+</form>
+<p id="formMessage"></p>
+</section>
 <!-- SECTION 3: CEO VERIFICATION -->
 <section class="ceo-section">
   <h2>CEO Verification</h2>

@@ -1,118 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Enquire About Adopting a Pet | Paw Shelter Durban</title>
-  <meta name="description" content="Send an enquiry to Paw Shelter Durban to adopt a rescue dog or cat, volunteer, or ask about pet care in KwaZulu-Natal.">
-  <meta name="keywords" content="enquiry Paw Shelter Durban, adopt dog Durban, adopt cat Durban, rescue enquiry KZN, pet adoption enquiry">
-  <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Enquire About Adoption at Paw Shelter Durban">
-  <meta property="og:description" content="Ask about adopting a rescued pet or supporting Paw Shelter Durban in KwaZulu-Natal.">
-  <meta property="og:type" content="website">
-  <link rel="canonical" href="https://www.pawshelter.co.za/enquiry.html">
-  <link rel="stylesheet" href="style.css">
+<title>Enquire About Adopting a Pet - Paws and Hope</title>
+<style>
+body { font-family: Arial; margin: 0; background: #fff5eb; }
+header { background: #3b1d0a; color: white; text-align: center; padding: 30px; }
+nav { background: orange; text-align: center; padding: 12px; }
+nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+section { max-width: 700px; margin: 20px auto; background: white; padding: 25px; border-radius: 10px; }
+input, select, textarea { width: 100%; padding: 10px; margin: 8px 0 15px 0; }
+button { background: orange; color: white; padding: 12px 20px; border: none; font-weight: bold; cursor: pointer; }
+</style>
 </head>
 <body>
 
 <header>
-<img src="images/paws-and-hope.png2" alt="Paw Shelter logo" class="logo">
-<h1>Contact Us</h1>
+<h1>Enquire About Adopting a Pet</h1>
 <p>Beauty within the walls.</p>
 </header>
 
 <nav>
-<a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="enquiry.html">Enquiry</a><a href="contact.html">Contact</a><a href="clothing.html">Clothing</a>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="services.html">Services</a>
+<a href="enquiry.html">Enquiry</a>
+<a href="contact.html">Contact</a>
+<a href="clothing.html">Clothing</a>
 </nav>
 
-<main>
-<!-- SECTION 1: INTRO -->
-<section>
-<h2>We Are Here to Help</h2>
-<p>Contact us for adoption, rescue emergencies, grooming bookings, clothing orders or any questions. We are open everyday.</p>
-</section>
-
-<!-- SECTION 2: DETAILS -->
-<section>
-<h2>Contact Details</h2>
-</section>
-
-<section class="grid">
-<div class="card"><h3>Location</h3><p>Durban, KZN<br>South Africa</p></div>
-<div class="card"><h3>Phone</h3><p>068 443 2036<br>7 days a week</p></div>
-<div class="card"><h3>Email</h3><p>info@pawshelter.co.za<br>Reply within 24h</p></div>
-</section>
-<!-- SECTION 2: ENQUIRY FORM -->
 <section>
 <h2>Send Us An Enquiry</h2>
-<p>Want to adopt, volunteer or ask about pet care? Fill in the form below and we will reply within 24 hours.</p>
-<form id="enquiryForm">
-<label for="name">Full Name:</label><br>
-<input type="text" id="name" name="name" placeholder="Enter your full name" required><br><br>
-
-<label for="email">Email:</label><br>
-<input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
-
-<label for="interest">I am interested in:</label><br>
-<select id="interest" name="interest" required>
-<option value="">Please select...</option>
-<option value="adoption">Adopting a Pet</option>
-<option value="volunteer">Volunteering</option>
-<option value="donation">Donating</option>
-<option value="general">General Enquiry</option>
-</select><br><br>
-
-<label for="message">Message:</label><br>
-<textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea><br><br>
-
+<p>Want to adopt a pet or ask a question? Fill in the form below.</p>
+<form>
+<label>Your Name</label>
+<input type="text" placeholder="Enter your full name" required>
+<label>Your Email</label>
+<input type="email" placeholder="Enter your email" required>
+<label>What pet are you interested in?</label>
+<select><option>Dogs</option><option>Cats</option><option>Other</option></select>
+<label>Your Message</label>
+<textarea rows="5" placeholder="Type your enquiry here..." required></textarea>
 <button type="submit">Send Enquiry</button>
 </form>
-<p id="formMessage"></p>
-</section>
-<!-- SECTION 3: CEO VERIFICATION -->
-<section class="ceo-section">
-  <h2>CEO Verification</h2>
-  <p>Enter the correct CEO details to view the executive contact information.</p>
-
-  <form id="ceoAccessForm" class="ceo-form" novalidate>
-    <div class="form-row">
-      <label for="ceoName">CEO Name</label>
-      <input type="text" id="ceoName" name="ceoName" placeholder="Enter CEO name" required>
-    </div>
-
-    <div class="form-row">
-      <label for="ceoCode">CEO Access Code</label>
-      <input type="text" id="ceoCode" name="ceoCode" placeholder="Enter access code" required>
-    </div>
-
-    <button type="submit">Verify CEO</button>
-  </form>
-
-  <div id="ceoInfo" class="ceo-info" hidden>
-    <h3>CEO Information</h3>
-  </div>
 </section>
 
-<!-- SECTION 4: HOURS -->
 <section>
-<h2>Hours & Social Media</h2>
-<p><strong>Hours:</strong> Mon-Fri 07:00-18:00 | Sat-Sun 09:00-16:00</p>
-<p><strong>Facebook:</strong> Paw Shelter Durban | <strong>Instagram:</strong> @pawshelter_kzn</p>
-<p><strong>WhatsApp:</strong> 068 443 2036 (fastest reply)</p>
-<img src="images/dog3.jpeg" alt="Happy rescued dog waiting for adoption at Paw Shelter Durban">
+<h2>CEO Verification</h2>
+<p>For CEO access only.</p>
+<label>CEO Name</label>
+<input type="text" placeholder="Enter CEO Name">
+<label>CEO Access Code</label>
+<input type="password" placeholder="Enter Access Code">
+<button type="button">Verify CEO</button>
 </section>
 
-<!-- SECTION 5: DIRECTIONS -->
-<section>
-<h2>How to Find Us</h2>
-<p>We are in Durban central, easy to find. Taxi and bus stop nearby. Free parking at shelter. Ask for Paw Shelter when you call and we will guide you.</p>
-</section>
-
-</main>
-
-<footer>
-<p>Paw Shelter 2026 | 068 443 2036 | Durban, KZN | info@pawshelter.co.za</p>
-<p>Mon-Fri 07:00-18:00 | Sat-Sun 09:00-16:00</p>
-</footer>
 </body>
 </html>
